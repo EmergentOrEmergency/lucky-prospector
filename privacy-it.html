@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Informativa privacy – Lucky Prospector</title>
+<style>
+:root { --bg: #f7f4e8; --fg: #1f2a22; --muted: #5b665e; --accent: #2e7d4f; --line: #d9d3bd; }
+@media (prefers-color-scheme: dark) { :root { --bg: #151a16; --fg: #e8ebe4; --muted: #a3ada5; --accent: #7fcf9c; --line: #333b35; } }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+main { max-width: 760px; margin: 0 auto; padding: 24px 16px 64px; }
+h1 { font-size: 1.8rem; line-height: 1.25; }
+h2 { margin-top: 2rem; font-size: 1.3rem; border-bottom: 1px solid var(--line); padding-bottom: .25rem; }
+h3 { font-size: 1.05rem; }
+a { color: var(--accent); }
+code { font-size: .9em; overflow-wrap: anywhere; }
+nav { display: flex; gap: 12px; flex-wrap: wrap; font-size: .95rem; margin-bottom: 8px; }
+.table { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: .95rem; }
+th, td { border: 1px solid var(--line); padding: 6px 8px; text-align: left; vertical-align: top; }
+footer { margin-top: 3rem; color: var(--muted); font-size: .9rem; }
+</style>
+</head>
+<body>
+<main>
+<nav><a href="privacy.html">English</a><a href="delete-account-it.html">Eliminare l'account</a></nav>
+<h1>Informativa privacy – Lucky Prospector</h1>
+<p><strong>Ultimo aggiornamento:</strong> 29 settembre 2026</p>
+<p>Questa informativa, resa ai sensi dell'art. 13 del Regolamento (UE) 2016/679 ("GDPR"), spiega quali dati tratta l'app Android Lucky Prospector (<code>com.luckyprospector.app</code>), perché e per quanto tempo.</p>
+<h2>1. Titolare del trattamento</h2>
+<p>Daniele Bulgarelli, Reggio Emilia, Italia. Contatto privacy: <a href="mailto:intervistaconleai@gmail.com">intervistaconleai@gmail.com</a>.</p>
+<h2>2. In breve</h2>
+<ul><li>Puoi cercare e salvare quadrifogli senza account e senza connessione.</li><li>Foto, desideri e posizione precisa restano sul tuo telefono.</li><li>Online va solo ciò che scegli di pubblicare sulla mappa condivisa: il tipo di ritrovamento, una zona arrotondata ad almeno 100 m e, se lo vuoi, un ritaglio della foto senza dati GPS.</li><li>Nell'app non ci sono pubblicità né strumenti di analisi o di tracciamento.</li></ul>
+<h2>3. Dati che restano sul tuo dispositivo</h2>
+<p>Il titolare non riceve questi dati e non può leggerli.</p>
+<ul><li><strong>Immagini della fotocamera.</strong> Durante la ricerca il modello di riconoscimento (TensorFlow Lite/LiteRT) analizza i fotogrammi direttamente sul telefono. I fotogrammi non vengono salvati né inviati. Le tue foto non servono ad addestrare il modello.</li><li><strong>Ritrovamenti.</strong> Per ogni ritrovamento salvato l'app conserva in un database locale: data e ora, tipo (quadrifoglio o prato), il desiderio facoltativo, la posizione precisa con la sua accuratezza (solo se hai concesso la localizzazione), il risultato del riconoscimento (classe, confidenza, versione del modello), un'eventuale correzione della classe e lo stato di condivisione.</li><li><strong>Foto.</strong> Ogni foto viene salvata nell'archivio privato dell'app e <strong>copiata nella galleria del telefono</strong> (cartella "Pictures/Lucky Prospector"). La copia in galleria è visibile alle altre app con accesso alle foto e ai servizi di backup che hai eventualmente attivato. Se disinstalli l'app, può restare nella galleria.</li><li><strong>Sessione e cache.</strong> Se accedi, l'SDK Firebase conserva sul telefono la sessione e una cache dei dati della mappa condivisa.</li></ul>
+<p>Il backup automatico di Android è disattivato per l'app, quindi questi dati non vengono copiati nel cloud di sistema. Puoi eliminare un ritrovamento dall'app: vengono cancellati il record, la foto privata e la copia in galleria. Se il ritrovamento era condiviso, viene ritirato anche il pin pubblico.</p>
+<h2>4. Dati trattati online</h2>
+<h3>4.1 Accesso con Google (facoltativo)</h3>
+<p>L'accesso serve solo per pubblicare sulla mappa condivisa, vederla e inviare suggerimenti. Avviene tramite Google (Credential Manager) e Firebase Authentication. Google riceve la richiesta di accesso e ci trasmette un identificativo dell'account. Firebase conserva un identificativo utente (UID), l'indirizzo email, il nome e la foto del profilo Google, i dati tecnici di accesso (date di creazione e ultimo accesso) e i token di sessione. L'app mostra il tuo nome e la tua foto solo a te, nella schermata Profilo.</p>
+<h3>4.2 Mappa condivisa (solo se decidi di condividere)</h3>
+<p>Un ritrovamento viene pubblicato solo quando tocchi "Condividi" e confermi dopo aver visto l'anteprima. Il <strong>documento pubblico</strong>, visibile a tutti gli utenti che hanno effettuato l'accesso, contiene soltanto:</p>
+<ul><li>il tipo, stabilito dal riconoscimento sul telefono;</li><li>la posizione <strong>arrotondata al centro di una cella di almeno 100 m</strong> (150 m di default) e un geohash calcolato su quel punto arrotondato;</li><li>la data di pubblicazione e quella dell'ultima conferma;</li><li>contatori anonimi: conferme, segnalazioni, "non c'è più";</li><li>un'indicazione sulla presenza della foto.</li></ul>
+<p>Il documento pubblico non contiene identità, desiderio né posizione precisa.</p>
+<p><strong>Foto facoltativa:</strong> un ritaglio quadrato attorno ai trifogli riconosciuti, di 384 px al massimo, ricodificato dai pixel. Non contiene metadati EXIF: niente GPS, data o modello del telefono. Il ritaglio riduce lo sfondo ma non lo elimina, per questo l'app ti chiede di controllare l'immagine prima di inviarla.</p>
+<p><strong>Documenti privati collegati all'account.</strong> Sotto il tuo UID vengono conservati:</p>
+<ul><li>la "rivendicazione" di ciascun pin che hai pubblicato, con la data di creazione, che ti permette di ritirarlo;</li><li>le ricevute delle tue conferme, delle segnalazioni (con il motivo) e dei "non c'è più";</li><li>i contatori giornalieri, che limitano le pubblicazioni a 20 al giorno e i suggerimenti a 10 al giorno.</li></ul>
+<p>Gli altri utenti non vedono questi documenti. <strong>Il titolare, dalla console Firebase, può collegare il tuo account ai pin che hai pubblicato e alle tue segnalazioni.</strong> Ai fini del GDPR, quindi, la condivisione è anonima verso gli altri utenti ma pseudonima verso il titolare.</p>
+<p><strong>Rimozione.</strong> Puoi ritirare in qualunque momento un pin che hai pubblicato: pin, foto e rivendicazione vengono cancellati. I pin non scadono da soli. Dopo 3 segnalazioni di abuso, o quando 2 persone diverse indicano "non c'è più", un pin viene nascosto a tutti insieme alla sua foto. Il documento però resta memorizzato (vedi sezione 7).</p>
+<h3>4.3 Suggerimenti</h3>
+<p>Dalla schermata Profilo puoi inviare un messaggio con queste informazioni: categoria, testo (massimo 2000 caratteri), un contatto facoltativo, versione dell'app, lingua e data. Il messaggio non contiene il tuo UID né il tuo nome. Nel tuo spazio privato viene però aggiornato un contatore giornaliero con l'orario dell'ultimo invio. <strong>Confrontando quell'orario con la data del messaggio, il titolare potrebbe risalire all'account.</strong> Non inserire nel testo dati personali che non servono.</p>
+<h3>4.4 Sicurezza (Firebase App Check)</h3>
+<p>Per verificare che le richieste arrivino dall'app originale su un dispositivo autentico, l'app usa Firebase App Check con Google Play Integrity. Google valuta l'integrità del dispositivo e dell'app e rilascia un token. Il titolare non riceve dati del dispositivo.</p>
+<h2>5. Mappe (OpenFreeMap e MapLibre)</h2>
+<p>Le mappe sono disegnate sul telefono da MapLibre, con stile e tessere scaricate da OpenFreeMap (<code>tiles.openfreemap.org</code>). Il fornitore riceve il tuo indirizzo IP e le tessere richieste, quindi può sapere <strong>quale zona stai guardando</strong>, anche sulla mappa privata. Non riceve i tuoi ritrovamenti né i marker. Secondo le informazioni che pubblica, OpenFreeMap non registra gli IP nei log ordinari, può conservarli fino a 30 giorni durante incidenti tecnici e può usare Cloudflare. Per i dettagli vale la sua informativa. Senza connessione resta disponibile una mappa semplificata locale.</p>
+<h2>6. Finalità e basi giuridiche</h2>
+<div class="table"><table><thead><tr><th>Trattamento</th><th>Base giuridica</th></tr></thead><tbody><tr><td>Accesso e gestione dell'account</td><td>Esecuzione del servizio che richiedi (art. 6.1.b)</td></tr><tr><td>Pubblicazione sulla mappa condivisa, foto inclusa</td><td>Consenso, espresso con la conferma di condivisione e revocabile ritirando il pin (art. 6.1.a)</td></tr><tr><td>Rivendicazioni, ricevute, limiti giornalieri, soglie di rimozione, App Check</td><td>Legittimo interesse a prevenire abusi e spam e a proteggere il servizio (art. 6.1.f)</td></tr><tr><td>Suggerimenti ed eventuale risposta</td><td>Legittimo interesse a migliorare l'app; il contatto è facoltativo (art. 6.1.f)</td></tr><tr><td>Mappe</td><td>Legittimo interesse a mostrare la mappa che apri (art. 6.1.f)</td></tr><tr><td>Posizione del telefono</td><td>Permesso Android facoltativo; il dato resta sul dispositivo</td></tr></tbody></table></div>
+<p>Non ci sono decisioni automatizzate con effetti giuridici. Il riconoscimento decide solo come appare un pin (quadrifoglio o prato) e se può essere condiviso.</p>
+<h2>7. Conservazione</h2>
+<ul><li><strong>Dati locali:</strong> finché non elimini il ritrovamento o disinstalli l'app. La copia in galleria resta finché non la cancelli tu.</li><li><strong>Account e documenti privati:</strong> finché l'account esiste. Vengono cancellati con l'eliminazione dell'account, tranne i contatori tecnici descritti nella sezione 8.</li><li><strong>Pin pubblici e foto:</strong> finché non li ritiri o non elimini l'account. Pin e foto nascosti a seguito di segnalazioni: vengono cancellati automaticamente 90 giorni dopo essere stati nascosti.</li><li><strong>Suggerimenti:</strong> fino a 24 mesi dall'invio, poi vengono cancellati.</li><li><strong>Log tecnici di Google/Firebase:</strong> secondo le policy di Google.</li></ul>
+<h2>8. Eliminazione dell'account</h2>
+<p>Dal Profilo, in "Informazioni e privacy", "Elimina account e dati" rimuove: i pin che hai pubblicato con le relative foto e le rivendicazioni; le conferme, le segnalazioni e i "non c'è più" che hai dato ad altri pin, che vengono ritirati (il conteggio pubblico scende di uno) insieme alle ricevute; infine l'account Firebase. Restano solo due contatori tecnici giornalieri (numero di invii e orario dell'ultimo), privi di contenuto e non più collegabili a te dopo l'eliminazione dell'account: se potessero essere cancellati, chiunque potrebbe azzerare i limiti anti-spam. Un pin già nascosto dalla comunità resta nascosto anche se il tuo voto viene ritirato. Se non hai più l'app, puoi chiedere l'eliminazione da <a href="https://emergentoremergency.github.io/lucky-prospector/delete-account-it.html">https://emergentoremergency.github.io/lucky-prospector/delete-account-it.html</a> o scrivendo a <a href="mailto:intervistaconleai@gmail.com">intervistaconleai@gmail.com</a>. I dati locali si cancellano eliminando i ritrovamenti o disinstallando l'app. I suggerimenti non sono collegati all'account: possiamo cancellarli su richiesta se ci aiuti a individuarli.</p>
+<h2>9. Destinatari e trasferimenti</h2>
+<ul><li><strong>Google Ireland Ltd / Google LLC</strong> (Firebase Authentication, Cloud Firestore, App Check, Play Integrity), in qualità di responsabile del trattamento secondo i termini Firebase. Il database Firestore si trova nella regione <strong><code>eur3</code> (Unione europea)</strong>. Autenticazione, App Check e alcuni servizi di supporto possono trattare dati anche fuori dall'UE, in particolare negli Stati Uniti. In questi casi Google usa le Clausole contrattuali standard della Commissione europea e/o l'EU-U.S. Data Privacy Framework.</li><li><strong>OpenFreeMap</strong> (e l'eventuale CDN), per le tessere della mappa (sezione 5).</li><li>Gli <strong>altri utenti</strong> vedono solo i documenti pubblici descritti nella sezione 4.2.</li></ul>
+<p>I dati non vengono venduti né usati per pubblicità.</p>
+<h2>10. I tuoi diritti</h2>
+<p>Nei limiti degli artt. 15–22 GDPR puoi chiedere accesso, rettifica, cancellazione, limitazione e portabilità dei dati, e opporti ai trattamenti basati sul legittimo interesse. Puoi revocare il consenso in qualunque momento ritirando i pin condivisi, senza effetti sui trattamenti precedenti. Scrivi a <a href="mailto:intervistaconleai@gmail.com">intervistaconleai@gmail.com</a>. Hai anche diritto di proporre reclamo al <strong>Garante per la protezione dei dati personali</strong> (www.garanteprivacy.it).</p>
+<h2>11. Minori</h2>
+<p>L'app non è rivolta a persone con meno di 14 anni, l'età da cui in Italia si può dare in autonomia il consenso ai servizi online (art. 2-quinquies, Codice privacy). Sotto questa età non si deve accedere né condividere senza il consenso di chi esercita la responsabilità genitoriale.</p>
+<h2>12. Permessi Android</h2>
+<ul><li><strong>Fotocamera</strong> (obbligatoria): per la ricerca e le foto.</li><li><strong>Posizione precisa/approssimativa</strong> (facoltativa): per collocare il ritrovamento sulla tua mappa.</li><li><strong>Internet e stato della rete:</strong> per l'accesso, la mappa condivisa, le mappe e i suggerimenti.</li><li><strong>Scrittura nella memoria</strong> (solo Android 9 o precedenti): per copiare la foto nella galleria.</li></ul>
+<h2>13. Modifiche</h2>
+<p>Pubblicheremo qui ogni modifica, aggiornando la data. Se una modifica è rilevante, te lo segnaleremo anche nell'app.</p>
+<footer>Lucky Prospector · Daniele Bulgarelli · <a href="mailto:intervistaconleai@gmail.com">intervistaconleai@gmail.com</a></footer>
+</main>
+</body>
+</html>

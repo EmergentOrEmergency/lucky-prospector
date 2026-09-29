@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy – Lucky Prospector</title>
+<style>
+:root { --bg: #f7f4e8; --fg: #1f2a22; --muted: #5b665e; --accent: #2e7d4f; --line: #d9d3bd; }
+@media (prefers-color-scheme: dark) { :root { --bg: #151a16; --fg: #e8ebe4; --muted: #a3ada5; --accent: #7fcf9c; --line: #333b35; } }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+main { max-width: 760px; margin: 0 auto; padding: 24px 16px 64px; }
+h1 { font-size: 1.8rem; line-height: 1.25; }
+h2 { margin-top: 2rem; font-size: 1.3rem; border-bottom: 1px solid var(--line); padding-bottom: .25rem; }
+h3 { font-size: 1.05rem; }
+a { color: var(--accent); }
+code { font-size: .9em; overflow-wrap: anywhere; }
+nav { display: flex; gap: 12px; flex-wrap: wrap; font-size: .95rem; margin-bottom: 8px; }
+.table { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: .95rem; }
+th, td { border: 1px solid var(--line); padding: 6px 8px; text-align: left; vertical-align: top; }
+footer { margin-top: 3rem; color: var(--muted); font-size: .9rem; }
+</style>
+</head>
+<body>
+<main>
+<nav><a href="privacy-it.html">Italiano</a><a href="delete-account.html">Delete your account</a></nav>
+<h1>Privacy Policy – Lucky Prospector</h1>
+<p><strong>Last updated:</strong> 29 September 2026</p>
+<p>This notice is provided under Art. 13 of Regulation (EU) 2016/679 ("GDPR"). It explains what data the Lucky Prospector Android app (<code>com.luckyprospector.app</code>) processes, why, and for how long. The Italian version is the reference text.</p>
+<h2>1. Controller</h2>
+<p>Daniele Bulgarelli, Reggio Emilia, Italy. Privacy contact: <a href="mailto:intervistaconleai@gmail.com">intervistaconleai@gmail.com</a>.</p>
+<h2>2. In short</h2>
+<ul><li>You can search for and save clovers without an account and without a connection.</li><li>Photos, wishes and your precise location stay on your phone.</li><li>Only what you choose to publish on the shared map goes online: the type of finding, an area rounded to at least 100 m and, if you want, a cropped photo without GPS data.</li><li>The app contains no ads and no analytics or tracking tools.</li></ul>
+<h2>3. Data that stays on your device</h2>
+<p>The controller does not receive this data and cannot read it.</p>
+<ul><li><strong>Camera images.</strong> While you search, the recognition model (TensorFlow Lite/LiteRT) analyses camera frames on the phone. Frames are never stored or sent anywhere. Your photos are not used to train the model.</li><li><strong>Findings.</strong> For each saved finding the app keeps these in a local database: date and time, type (four-leaf clover or clover patch), your optional wish, the precise position and its accuracy (only if you granted location access), the recognition result (class, confidence, model version), any class correction, and the sharing status.</li><li><strong>Photos.</strong> Each photo is saved in the app's private storage and <strong>copied to the phone's gallery</strong> ("Pictures/Lucky Prospector"). The gallery copy is visible to other apps with photo access and to any backup service you have turned on. It may remain in the gallery after you uninstall the app.</li><li><strong>Session and cache.</strong> If you sign in, the Firebase SDK keeps your session and a cache of shared-map data on the phone.</li></ul>
+<p>Android automatic backup is disabled for the app, so this data is not copied to the system cloud backup. You can delete a finding in the app: this removes the record, the private photo and the gallery copy. If the finding was shared, the public pin is withdrawn as well.</p>
+<h2>4. Data processed online</h2>
+<h3>4.1 Google sign-in (optional)</h3>
+<p>Signing in is needed only to publish on the shared map, to view it, and to send feedback. It works through Google (Credential Manager) and Firebase Authentication. Google receives the sign-in request and passes us an identifier for your account. Firebase stores a user ID (UID), your email address, your Google profile name and photo, technical sign-in data (creation and last sign-in dates) and session tokens. The app shows your name and photo only to you, on the Profile screen.</p>
+<h3>4.2 Shared map (only if you choose to share)</h3>
+<p>A finding is published only when you tap "Share" and confirm after seeing a preview. The <strong>public document</strong> can be seen by every signed-in user and contains only:</p>
+<ul><li>the type, decided by the recognition model on the phone;</li><li>the position <strong>rounded to the centre of a grid cell of at least 100 m</strong> (150 m by default), and a geohash computed from that rounded point;</li><li>the publication date and the date of the last confirmation;</li><li>anonymous counters: confirmations, reports, "not there any more";</li><li>whether a photo is attached.</li></ul>
+<p>The public document contains no identity, no wish and no precise position.</p>
+<p><strong>Optional photo:</strong> a square crop around the recognised clovers, 384 px at most, re-encoded from the pixels. It carries no EXIF metadata: no GPS, date or phone model. The crop reduces the background but does not remove it, so the app asks you to check the image before you send it.</p>
+<p><strong>Private documents linked to your account.</strong> These are stored under your UID:</p>
+<ul><li>a "claim" for each pin you published, with its creation date, which lets you withdraw the pin;</li><li>receipts for your confirmations, your reports (with the reason) and your "not there any more" signals;</li><li>daily counters that limit publishing to 20 pins a day and feedback to 10 messages a day.</li></ul>
+<p>Other users cannot see these documents. <strong>The controller can link your account to the pins you published and to your reports through the Firebase console.</strong> Under the GDPR, sharing is therefore anonymous to other users but pseudonymous to the controller.</p>
+<p><strong>Removal.</strong> You can withdraw a pin you published at any time: the pin, its photo and your claim are deleted. Pins do not expire on their own. After 3 abuse reports, or once 2 different people say "not there any more", a pin and its photo are hidden from everyone. The document itself stays stored (see section 7).</p>
+<h3>4.3 Feedback</h3>
+<p>From the Profile screen you can send a message with this information: category, text (up to 2000 characters), an optional contact, app version, language and date. The message does not contain your UID or your name. However, a daily counter in your private area is updated with the time you last sent a message. <strong>By comparing that time with the message date, the controller could link the message to your account.</strong> Please do not put unnecessary personal data in the text.</p>
+<h3>4.4 Security (Firebase App Check)</h3>
+<p>To check that requests come from the genuine app on a genuine device, the app uses Firebase App Check with Google Play Integrity. Google assesses the integrity of the device and the app and issues a token. The controller receives no device data.</p>
+<h2>5. Maps (OpenFreeMap and MapLibre)</h2>
+<p>Maps are drawn on your phone by MapLibre, using a style and tiles downloaded from OpenFreeMap (<code>tiles.openfreemap.org</code>). The provider receives your IP address and the tiles you request, so it can tell <strong>which area you are looking at</strong>, including on your private map. It does not receive your findings or markers. According to the information it publishes, OpenFreeMap does not log IP addresses in ordinary logs, may keep them for up to 30 days during technical incidents, and may use Cloudflare. Its own policy governs the details. A simplified local map remains available offline.</p>
+<h2>6. Purposes and legal bases</h2>
+<div class="table"><table><thead><tr><th>Processing</th><th>Legal basis</th></tr></thead><tbody><tr><td>Sign-in and account management</td><td>Performance of the service you request (Art. 6(1)(b))</td></tr><tr><td>Publishing on the shared map, photo included</td><td>Consent, given when you confirm sharing and withdrawn by withdrawing the pin (Art. 6(1)(a))</td></tr><tr><td>Claims, receipts, daily limits, removal thresholds, App Check</td><td>Legitimate interest in preventing abuse and spam and in protecting the service (Art. 6(1)(f))</td></tr><tr><td>Feedback and any reply</td><td>Legitimate interest in improving the app; the contact field is optional (Art. 6(1)(f))</td></tr><tr><td>Maps</td><td>Legitimate interest in showing the map you open (Art. 6(1)(f))</td></tr><tr><td>Device location</td><td>Optional Android permission; the data stays on the device</td></tr></tbody></table></div>
+<p>There is no automated decision-making with legal effects. The recognition model only decides how a pin is shown (four-leaf clover or patch) and whether it can be shared.</p>
+<h2>7. Retention</h2>
+<ul><li><strong>Local data:</strong> until you delete the finding or uninstall the app. The gallery copy stays until you delete it.</li><li><strong>Account and private documents:</strong> for as long as the account exists. They are deleted when you delete your account, except the technical counters described in section 8.</li><li><strong>Public pins and photos:</strong> until you withdraw them or delete your account. Pins and photos hidden after reports: they are deleted automatically 90 days after being hidden.</li><li><strong>Feedback:</strong> up to 24 months after they are sent, then deleted.</li><li><strong>Google/Firebase technical logs:</strong> according to Google's policies.</li></ul>
+<h2>8. Deleting your account</h2>
+<p>On the Profile screen, under "Info and privacy", "Delete account and data" removes: the pins you published with their photos and claims; the confirmations, reports and "not there any more" signals you gave to other pins, which are withdrawn (the public count drops by one) together with their receipts; and finally your Firebase account. Only two technical daily counters remain (number of submissions and time of the last one). They hold no content and can no longer be linked to you once the account is deleted; if they could be deleted, anyone could reset the anti-spam limits. A pin already hidden by the community stays hidden even when your vote is withdrawn. If you no longer have the app, you can request deletion at <a href="https://emergentoremergency.github.io/lucky-prospector/delete-account.html">https://emergentoremergency.github.io/lucky-prospector/delete-account.html</a> or by writing to <a href="mailto:intervistaconleai@gmail.com">intervistaconleai@gmail.com</a>. To erase local data, delete your findings or uninstall the app. Feedback messages are not linked to your account: we can delete them on request if you help us identify them.</p>
+<h2>9. Recipients and transfers</h2>
+<ul><li><strong>Google Ireland Ltd / Google LLC</strong> (Firebase Authentication, Cloud Firestore, App Check, Play Integrity), acting as processor under the Firebase terms. The Firestore database is in the <strong><code>eur3</code> (European Union)</strong> region. Authentication, App Check and some supporting services may also process data outside the EU, notably in the United States. In those cases Google relies on the European Commission's Standard Contractual Clauses and/or the EU-U.S. Data Privacy Framework.</li><li><strong>OpenFreeMap</strong> (and any CDN it uses), for map tiles (section 5).</li><li><strong>Other users</strong> see only the public documents described in section 4.2.</li></ul>
+<p>Your data is not sold or used for advertising.</p>
+<h2>10. Your rights</h2>
+<p>Within the limits of Arts. 15–22 GDPR you can ask to access, rectify, erase, restrict and port your data, and you can object to processing based on legitimate interest. You can withdraw your consent at any time by withdrawing your shared pins; this does not affect processing that already took place. Write to <a href="mailto:intervistaconleai@gmail.com">intervistaconleai@gmail.com</a>. You also have the right to complain to the <strong>Garante per la protezione dei dati personali</strong> (www.garanteprivacy.it).</p>
+<h2>11. Children</h2>
+<p>The app is not directed at people under 14, the age from which people in Italy can consent to online services on their own (Art. 2-quinquies of the Italian Privacy Code). Below that age, users must not sign in or share without the consent of a parent or guardian.</p>
+<h2>12. Android permissions</h2>
+<ul><li><strong>Camera</strong> (required): for searching and taking photos.</li><li><strong>Precise/approximate location</strong> (optional): to place a finding on your map.</li><li><strong>Internet and network state:</strong> for sign-in, the shared map, map tiles and feedback.</li><li><strong>Write storage</strong> (Android 9 and earlier only): to copy photos to the gallery.</li></ul>
+<h2>13. Changes</h2>
+<p>We will publish any change here and update the date. If a change is significant, we will also tell you in the app.</p>
+<footer>Lucky Prospector · Daniele Bulgarelli · <a href="mailto:intervistaconleai@gmail.com">intervistaconleai@gmail.com</a></footer>
+</main>
+</body>
+</html>
