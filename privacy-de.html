@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Datenschutzerklärung – Lucky Prospector</title>
+<style>
+:root { --bg: #f7f4e8; --fg: #1f2a22; --muted: #5b665e; --accent: #2e7d4f; --line: #d9d3bd; }
+@media (prefers-color-scheme: dark) { :root { --bg: #151a16; --fg: #e8ebe4; --muted: #a3ada5; --accent: #7fcf9c; --line: #333b35; } }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+main { max-width: 760px; margin: 0 auto; padding: 24px 16px 64px; }
+h1 { font-size: 1.8rem; line-height: 1.25; }
+h2 { margin-top: 2rem; font-size: 1.3rem; border-bottom: 1px solid var(--line); padding-bottom: .25rem; }
+h3 { font-size: 1.05rem; }
+a { color: var(--accent); }
+code { font-size: .9em; overflow-wrap: anywhere; }
+nav { display: flex; gap: 12px; flex-wrap: wrap; font-size: .95rem; margin-bottom: 8px; }
+.table { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: .95rem; }
+th, td { border: 1px solid var(--line); padding: 6px 8px; text-align: left; vertical-align: top; }
+footer { margin-top: 3rem; color: var(--muted); font-size: .9rem; }
+</style>
+</head>
+<body>
+<main>
+<nav><a href="privacy.html">English</a><a href="privacy-it.html">Italiano</a><a href="privacy-fr.html">Français</a><a href="privacy-es.html">Español</a><a href="delete-account-de.html">· Konto löschen</a></nav>
+<h1>Datenschutzerklärung – Lucky Prospector</h1>
+<p><strong>Stand:</strong> 29. September 2026</p>
+<p>Diese Information erfolgt nach Art. 13 der Verordnung (EU) 2016/679 („DSGVO“). Sie erklärt, welche Daten die Android-App Lucky Prospector (<code>com.luckyprospector.app</code>) verarbeitet, warum und wie lange. Maßgeblich ist die italienische Fassung; im Zweifel gilt sie.</p>
+<h2>1. Verantwortlicher</h2>
+<p>Daniele Bulgarelli, Reggio Emilia, Italien. Datenschutzkontakt: <a href="mailto:intervistaconleai@gmail.com">intervistaconleai@gmail.com</a>.</p>
+<h2>2. Kurz gesagt</h2>
+<ul><li>Du kannst Klee ohne Konto und ohne Verbindung suchen und speichern.</li><li>Fotos, Wünsche und dein genauer Standort bleiben auf deinem Handy.</li><li>Online geht nur, was du auf der gemeinsamen Karte veröffentlichst: die Art des Fundes, ein auf mindestens 100 m gerundeter Bereich und, wenn du willst, ein zugeschnittenes Foto ohne GPS-Daten.</li><li>Die App enthält keine Werbung und keine Analyse- oder Tracking-Werkzeuge.</li></ul>
+<h2>3. Daten, die auf deinem Gerät bleiben</h2>
+<p>Der Verantwortliche erhält diese Daten nicht und kann sie nicht lesen.</p>
+<ul><li><strong>Kamerabilder.</strong> Während der Suche analysiert das Erkennungsmodell (TensorFlow Lite/LiteRT) die Kamerabilder auf dem Handy. Die Bilder werden weder gespeichert noch versendet. Deine Fotos werden nicht zum Training des Modells verwendet.</li><li><strong>Funde.</strong> Für jeden gespeicherten Fund speichert die App in einer lokalen Datenbank: Datum und Uhrzeit, Art (Glücksklee oder Kleefeld), deinen optionalen Wunsch, den genauen Standort mit seiner Genauigkeit (nur wenn du den Standortzugriff erlaubt hast), das Erkennungsergebnis (Klasse, Konfidenz, Modellversion), eine eventuelle Korrektur der Klasse und den Freigabestatus.</li><li><strong>Fotos.</strong> Jedes Foto wird im privaten Speicher der App gespeichert und <strong>in die Galerie des Handys kopiert</strong> („Pictures/Lucky Prospector“). Die Kopie in der Galerie ist für andere Apps mit Fotozugriff und für von dir aktivierte Backup-Dienste sichtbar. Sie kann nach der Deinstallation der App in der Galerie bleiben.</li><li><strong>Sitzung und Cache.</strong> Wenn du dich anmeldest, speichert das Firebase-SDK auf dem Handy die Sitzung und einen Cache der Daten der gemeinsamen Karte.</li></ul>
+<p>Die automatische Android-Sicherung ist für die App deaktiviert; diese Daten werden also nicht in die Cloud-Sicherung des Systems kopiert. Du kannst einen Fund in der App löschen: Dabei werden der Eintrag, das private Foto und die Kopie in der Galerie entfernt. War der Fund geteilt, wird auch der öffentliche Pin zurückgezogen.</p>
+<h2>4. Online verarbeitete Daten</h2>
+<h3>4.1 Anmeldung mit Google (optional)</h3>
+<p>Die Anmeldung wird nur benötigt, um auf der gemeinsamen Karte zu veröffentlichen, sie anzusehen und Vorschläge zu senden. Sie erfolgt über Google (Credential Manager) und Firebase Authentication. Google erhält die Anmeldeanfrage und übermittelt uns eine Kennung deines Kontos. Firebase speichert eine Nutzerkennung (UID), deine E-Mail-Adresse, Namen und Foto deines Google-Profils, technische Anmeldedaten (Datum der Erstellung und der letzten Anmeldung) und Sitzungstokens. Die App zeigt deinen Namen und dein Foto nur dir, auf dem Profil-Bildschirm.</p>
+<h3>4.2 Gemeinsame Karte (nur wenn du teilen möchtest)</h3>
+<p>Ein Fund wird nur veröffentlicht, wenn du auf „Teilen“ tippst und nach einer Vorschau bestätigst. Das <strong>öffentliche Dokument</strong> ist für alle angemeldeten Nutzer sichtbar und enthält nur:</p>
+<ul><li>die Art, die das Erkennungsmodell auf dem Handy bestimmt;</li><li>den Standort, <strong>gerundet auf die Mitte einer Rasterzelle von mindestens 100 m</strong> (standardmäßig 150 m), und einen aus diesem gerundeten Punkt berechneten Geohash;</li><li>das Datum der Veröffentlichung und der letzten Bestätigung;</li><li>anonyme Zähler: Bestätigungen, Meldungen, „nicht mehr da“;</li><li>ob ein Foto angehängt ist.</li></ul>
+<p>Das öffentliche Dokument enthält keine Identität, keinen Wunsch und keinen genauen Standort.</p>
+<p><strong>Optionales Foto:</strong> ein quadratischer Ausschnitt um den erkannten Klee, höchstens 384 px, aus den Pixeln neu kodiert. Es enthält keine EXIF-Metadaten: kein GPS, kein Datum, kein Handymodell. Der Ausschnitt verkleinert den Hintergrund, entfernt ihn aber nicht; deshalb bittet dich die App, das Bild vor dem Senden zu prüfen.</p>
+<p><strong>Private Dokumente, die mit deinem Konto verknüpft sind.</strong> Unter deiner UID werden gespeichert:</p>
+<ul><li>eine „Inanspruchnahme“ für jeden veröffentlichten Pin, mit Erstellungsdatum, mit der du den Pin zurückziehen kannst;</li><li>Belege deiner Bestätigungen, deiner Meldungen (mit Grund) und deiner „nicht mehr da“-Angaben;</li><li>tägliche Zähler, die das Veröffentlichen auf 20 Pins pro Tag und Vorschläge auf 10 Nachrichten pro Tag begrenzen.</li></ul>
+<p>Andere Nutzer können diese Dokumente nicht sehen. <strong>Der Verantwortliche kann über die Firebase-Konsole dein Konto mit den von dir veröffentlichten Pins und deinen Meldungen verknüpfen.</strong> Im Sinne der DSGVO ist das Teilen daher für andere Nutzer anonym, für den Verantwortlichen aber pseudonym.</p>
+<p><strong>Entfernen.</strong> Du kannst einen veröffentlichten Pin jederzeit zurückziehen: Pin, Foto und deine Inanspruchnahme werden gelöscht. Pins laufen nicht von selbst ab. Nach 3 Missbrauchsmeldungen oder wenn 2 verschiedene Personen „nicht mehr da“ angeben, werden Pin und Foto für alle ausgeblendet. Das Dokument bleibt für die in Abschnitt 7 genannte Dauer gespeichert.</p>
+<h3>4.3 Vorschläge</h3>
+<p>Auf dem Profil-Bildschirm kannst du eine Nachricht mit folgenden Angaben senden: Kategorie, Text (höchstens 2000 Zeichen), ein optionaler Kontakt, App-Version, Sprache und Datum. Die Nachricht enthält weder deine UID noch deinen Namen. Allerdings wird in deinem privaten Bereich ein Tageszähler mit der Uhrzeit des letzten Versands aktualisiert. <strong>Durch den Vergleich dieser Uhrzeit mit dem Datum der Nachricht könnte der Verantwortliche die Nachricht deinem Konto zuordnen.</strong> Schreibe keine unnötigen personenbezogenen Daten in den Text.</p>
+<h3>4.4 Sicherheit (Firebase App Check)</h3>
+<p>Um zu prüfen, dass Anfragen von der echten App auf einem echten Gerät kommen, nutzt die App Firebase App Check mit Google Play Integrity. Google bewertet die Integrität von Gerät und App und stellt ein Token aus. Der Verantwortliche erhält keine Gerätedaten.</p>
+<h2>5. Karten (OpenFreeMap und MapLibre)</h2>
+<p>Die Karten zeichnet MapLibre auf dem Handy, mit Stil und Kacheln von OpenFreeMap (<code>tiles.openfreemap.org</code>). Der Anbieter erhält deine IP-Adresse und die angeforderten Kacheln und kann daher erkennen, <strong>welchen Bereich du ansiehst</strong>, auch auf deiner privaten Karte. Deine Funde und Markierungen erhält er nicht. Nach seinen eigenen Angaben speichert OpenFreeMap IP-Adressen nicht in den gewöhnlichen Protokollen, kann sie bei technischen Störungen bis zu 30 Tage aufbewahren und kann Cloudflare nutzen. Für Einzelheiten gilt seine Datenschutzerklärung. Ohne Verbindung bleibt eine vereinfachte lokale Karte verfügbar.</p>
+<h2>6. Zwecke und Rechtsgrundlagen</h2>
+<div class="table"><table><thead><tr><th>Verarbeitung</th><th>Rechtsgrundlage</th></tr></thead><tbody><tr><td>Anmeldung und Kontoverwaltung</td><td>Erfüllung des von dir angeforderten Dienstes (Art. 6 Abs. 1 lit. b)</td></tr><tr><td>Veröffentlichung auf der gemeinsamen Karte, mit Foto</td><td>Einwilligung, erteilt durch Bestätigen des Teilens und widerrufen durch Zurückziehen des Pins (Art. 6 Abs. 1 lit. a)</td></tr><tr><td>Inanspruchnahmen, Belege, Tageslimits, Schwellen zum Entfernen, App Check</td><td>Berechtigtes Interesse, Missbrauch und Spam zu verhindern und den Dienst zu schützen (Art. 6 Abs. 1 lit. f)</td></tr><tr><td>Vorschläge und etwaige Antwort</td><td>Berechtigtes Interesse, die App zu verbessern; der Kontakt ist optional (Art. 6 Abs. 1 lit. f)</td></tr><tr><td>Karten</td><td>Berechtigtes Interesse, die geöffnete Karte anzuzeigen (Art. 6 Abs. 1 lit. f)</td></tr><tr><td>Standort des Handys</td><td>Optionale Android-Berechtigung; die Angabe bleibt auf dem Gerät</td></tr></tbody></table></div>
+<p>Es gibt keine automatisierte Entscheidung mit rechtlicher Wirkung. Das Erkennungsmodell entscheidet nur, wie ein Pin angezeigt wird (Glücksklee oder Kleefeld) und ob er geteilt werden kann.</p>
+<h2>7. Speicherdauer</h2>
+<ul><li><strong>Lokale Daten:</strong> bis du den Fund löschst oder die App deinstallierst. Die Kopie in der Galerie bleibt, bis du sie löschst.</li><li><strong>Konto und private Dokumente:</strong> solange das Konto besteht. Sie werden mit dem Konto gelöscht, außer den technischen Zählern aus Abschnitt 8.</li><li><strong>Öffentliche Pins und Fotos:</strong> bis du sie zurückziehst oder dein Konto löschst. Nach Meldungen ausgeblendete Pins und Fotos: Sie werden 90 Tage nach dem Ausblenden automatisch gelöscht.</li><li><strong>Vorschläge:</strong> bis zu 24 Monate nach dem Versand, dann gelöscht.</li><li><strong>Technische Protokolle von Google/Firebase:</strong> nach den Richtlinien von Google.</li></ul>
+<h2>8. Konto löschen</h2>
+<p>Auf dem Profil-Bildschirm entfernt „Konto und Daten löschen“ unter „Info und Datenschutz“: die von dir veröffentlichten Pins mit ihren Fotos und Inanspruchnahmen; die Bestätigungen, Meldungen und „nicht mehr da“-Angaben, die du bei anderen Pins abgegeben hast; sie werden zurückgenommen (der öffentliche Zähler sinkt um eins), zusammen mit ihren Belegen; zuletzt dein Firebase-Konto. Es bleiben nur zwei technische Tageszähler (Anzahl der Sendungen und Uhrzeit der letzten), ohne Inhalt und nach der Kontolöschung nicht mehr dir zuordenbar: Könnten sie gelöscht werden, könnte jeder die Spam-Limits zurücksetzen. Ein bereits von der Gemeinschaft ausgeblendeter Pin bleibt ausgeblendet, auch wenn deine Stimme zurückgenommen wird. Wenn du die App nicht mehr hast, kannst du die Löschung unter <a href="https://emergentoremergency.github.io/lucky-prospector/delete-account-de.html">https://emergentoremergency.github.io/lucky-prospector/delete-account-de.html</a> oder per E-Mail an <a href="mailto:intervistaconleai@gmail.com">intervistaconleai@gmail.com</a> beantragen. Lokale Daten löschst du, indem du die Funde löschst oder die App deinstallierst. Vorschläge sind nicht mit dem Konto verknüpft: Wir können sie auf Anfrage löschen, wenn du uns hilfst, sie zu finden.</p>
+<h2>9. Empfänger und Übermittlungen</h2>
+<ul><li><strong>Google Ireland Ltd / Google LLC</strong> (Firebase Authentication, Cloud Firestore, App Check, Play Integrity) als Auftragsverarbeiter nach den Firebase-Bedingungen. Die Firestore-Datenbank liegt in der Region <strong><code>eur3</code> (Europäische Union)</strong>. Authentifizierung, App Check und einige unterstützende Dienste können Daten auch außerhalb der EU verarbeiten, insbesondere in den USA. In diesen Fällen stützt sich Google auf die Standardvertragsklauseln der Europäischen Kommission und/oder das EU-U.S. Data Privacy Framework.</li><li><strong>OpenFreeMap</strong> (und ein etwaiges CDN) für die Kartenkacheln (Abschnitt 5).</li><li><strong>Andere Nutzer</strong> sehen nur die in Abschnitt 4.2 beschriebenen öffentlichen Dokumente.</li></ul>
+<p>Deine Daten werden weder verkauft noch für Werbung verwendet.</p>
+<h2>10. Deine Rechte</h2>
+<p>Im Rahmen der Art. 15–22 DSGVO kannst du Auskunft, Berichtigung, Löschung, Einschränkung und Übertragbarkeit deiner Daten verlangen und Verarbeitungen auf Grundlage des berechtigten Interesses widersprechen. Du kannst deine Einwilligung jederzeit widerrufen, indem du deine geteilten Pins zurückziehst; frühere Verarbeitungen bleiben davon unberührt. Schreibe an <a href="mailto:intervistaconleai@gmail.com">intervistaconleai@gmail.com</a>. Du hast außerdem das Recht, dich beim <strong>Garante per la protezione dei dati personali</strong> (www.garanteprivacy.it) oder bei der Aufsichtsbehörde deines Wohnsitzlandes zu beschweren (in Deutschland die Datenschutzbehörde deines Bundeslandes, in Österreich die Datenschutzbehörde, in der Schweiz der EDÖB).</p>
+<h2>11. Minderjährige</h2>
+<p>Die App richtet sich nicht an Personen unter 14 Jahren, dem Alter, ab dem man in Italien selbst in Online-Dienste einwilligen kann (Art. 2-quinquies des italienischen Datenschutzgesetzes). Sieht das Recht deines Landes ein höheres Alter vor (in Deutschland 16 Jahre), gilt dieses. Unter diesem Alter darf man sich nur mit Zustimmung eines Erziehungsberechtigten anmelden oder etwas teilen.</p>
+<h2>12. Android-Berechtigungen</h2>
+<ul><li><strong>Kamera</strong> (erforderlich): für die Suche und die Fotos.</li><li><strong>Genauer/ungefährer Standort</strong> (optional): um einen Fund auf deiner Karte zu platzieren.</li><li><strong>Internet und Netzwerkstatus:</strong> für die Anmeldung, die gemeinsame Karte, die Kartenkacheln und Vorschläge.</li><li><strong>Speicher schreiben</strong> (nur Android 9 und älter): um Fotos in die Galerie zu kopieren.</li></ul>
+<h2>13. Änderungen</h2>
+<p>Änderungen veröffentlichen wir hier mit aktualisiertem Datum. Bei wesentlichen Änderungen informieren wir dich auch in der App.</p>
+<footer>Lucky Prospector · Daniele Bulgarelli · <a href="mailto:intervistaconleai@gmail.com">intervistaconleai@gmail.com</a></footer>
+</main>
+</body>
+</html>

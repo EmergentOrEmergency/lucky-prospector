@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Politique de confidentialité – Lucky Prospector</title>
+<style>
+:root { --bg: #f7f4e8; --fg: #1f2a22; --muted: #5b665e; --accent: #2e7d4f; --line: #d9d3bd; }
+@media (prefers-color-scheme: dark) { :root { --bg: #151a16; --fg: #e8ebe4; --muted: #a3ada5; --accent: #7fcf9c; --line: #333b35; } }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+main { max-width: 760px; margin: 0 auto; padding: 24px 16px 64px; }
+h1 { font-size: 1.8rem; line-height: 1.25; }
+h2 { margin-top: 2rem; font-size: 1.3rem; border-bottom: 1px solid var(--line); padding-bottom: .25rem; }
+h3 { font-size: 1.05rem; }
+a { color: var(--accent); }
+code { font-size: .9em; overflow-wrap: anywhere; }
+nav { display: flex; gap: 12px; flex-wrap: wrap; font-size: .95rem; margin-bottom: 8px; }
+.table { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: .95rem; }
+th, td { border: 1px solid var(--line); padding: 6px 8px; text-align: left; vertical-align: top; }
+footer { margin-top: 3rem; color: var(--muted); font-size: .9rem; }
+</style>
+</head>
+<body>
+<main>
+<nav><a href="privacy.html">English</a><a href="privacy-it.html">Italiano</a><a href="privacy-de.html">Deutsch</a><a href="privacy-es.html">Español</a><a href="delete-account-fr.html">· Supprimer le compte</a></nav>
+<h1>Politique de confidentialité – Lucky Prospector</h1>
+<p><strong>Dernière mise à jour :</strong> 29 septembre 2026</p>
+<p>Cette information est fournie au titre de l'art. 13 du règlement (UE) 2016/679 (« RGPD »). Elle explique quelles données traite l'application Android Lucky Prospector (<code>com.luckyprospector.app</code>), pourquoi et pendant combien de temps. Le texte de référence est la version italienne ; en cas de doute, c'est elle qui fait foi.</p>
+<h2>1. Responsable du traitement</h2>
+<p>Daniele Bulgarelli, Reggio Emilia, Italie. Contact confidentialité : <a href="mailto:intervistaconleai@gmail.com">intervistaconleai@gmail.com</a>.</p>
+<h2>2. En bref</h2>
+<ul><li>Vous pouvez chercher et enregistrer des trèfles sans compte et sans connexion.</li><li>Les photos, les vœux et votre position précise restent sur votre téléphone.</li><li>Seul ce que vous choisissez de publier sur la carte partagée est mis en ligne : le type de trouvaille, une zone arrondie à au moins 100 m et, si vous le souhaitez, une photo recadrée sans données GPS.</li><li>L'application ne contient ni publicité ni outils d'analyse ou de suivi.</li></ul>
+<h2>3. Données qui restent sur votre appareil</h2>
+<p>Le responsable ne reçoit pas ces données et ne peut pas les lire.</p>
+<ul><li><strong>Images de la caméra.</strong> Pendant la recherche, le modèle de reconnaissance (TensorFlow Lite/LiteRT) analyse les images de la caméra sur le téléphone. Les images ne sont ni enregistrées ni envoyées. Vos photos ne servent pas à entraîner le modèle.</li><li><strong>Trouvailles.</strong> Pour chaque trouvaille enregistrée, l'application conserve dans une base de données locale : la date et l'heure, le type (trèfle à quatre feuilles ou touffe de trèfles), votre vœu facultatif, la position précise et sa précision (seulement si vous avez autorisé la localisation), le résultat de la reconnaissance (classe, confiance, version du modèle), une éventuelle correction de la classe et l'état du partage.</li><li><strong>Photos.</strong> Chaque photo est enregistrée dans l'espace privé de l'application et <strong>copiée dans la galerie du téléphone</strong> (« Pictures/Lucky Prospector »). La copie de la galerie est visible par les autres applications ayant accès aux photos et par les services de sauvegarde que vous avez activés. Elle peut rester dans la galerie après la désinstallation de l'application.</li><li><strong>Session et cache.</strong> Si vous vous connectez, le SDK Firebase conserve sur le téléphone la session et un cache des données de la carte partagée.</li></ul>
+<p>La sauvegarde automatique d'Android est désactivée pour l'application : ces données ne sont donc pas copiées dans la sauvegarde cloud du système. Vous pouvez supprimer une trouvaille dans l'application : cela efface la fiche, la photo privée et la copie de la galerie. Si la trouvaille était partagée, le pin public est également retiré.</p>
+<h2>4. Données traitées en ligne</h2>
+<h3>4.1 Connexion avec Google (facultative)</h3>
+<p>La connexion ne sert qu'à publier sur la carte partagée, à la consulter et à envoyer des suggestions. Elle passe par Google (Credential Manager) et Firebase Authentication. Google reçoit la demande de connexion et nous transmet un identifiant de votre compte. Firebase conserve un identifiant utilisateur (UID), votre adresse e-mail, le nom et la photo de votre profil Google, des données techniques de connexion (dates de création et de dernière connexion) et des jetons de session. L'application n'affiche votre nom et votre photo qu'à vous, sur l'écran Profil.</p>
+<h3>4.2 Carte partagée (seulement si vous choisissez de partager)</h3>
+<p>Une trouvaille n'est publiée que lorsque vous touchez « Partager » et confirmez après avoir vu un aperçu. Le <strong>document public</strong> est visible par tous les utilisateurs connectés et contient uniquement :</p>
+<ul><li>le type, décidé par le modèle de reconnaissance sur le téléphone ;</li><li>la position <strong>arrondie au centre d'une cellule d'au moins 100 m</strong> (150 m par défaut), et un geohash calculé à partir de ce point arrondi ;</li><li>la date de publication et celle de la dernière confirmation ;</li><li>des compteurs anonymes : confirmations, signalements, « Ce n'est plus là » ;</li><li>l'indication qu'une photo est jointe ou non.</li></ul>
+<p>Le document public ne contient ni identité, ni vœu, ni position précise.</p>
+<p><strong>Photo facultative :</strong> un recadrage carré autour des trèfles reconnus, de 384 px au plus, réencodé à partir des pixels. Elle ne contient aucune métadonnée EXIF : ni GPS, ni date, ni modèle de téléphone. Le recadrage réduit l'arrière-plan sans le supprimer : l'application vous demande donc de vérifier l'image avant l'envoi.</p>
+<p><strong>Documents privés liés à votre compte.</strong> Ils sont conservés sous votre UID :</p>
+<ul><li>une « revendication » pour chaque pin publié, avec sa date de création, qui vous permet de retirer le pin ;</li><li>les reçus de vos confirmations, de vos signalements (avec le motif) et de vos « Ce n'est plus là » ;</li><li>des compteurs quotidiens qui limitent la publication à 20 pins par jour et les suggestions à 10 messages par jour.</li></ul>
+<p>Les autres utilisateurs ne peuvent pas voir ces documents. <strong>Le responsable peut relier votre compte aux pins que vous avez publiés et à vos signalements via la console Firebase.</strong> Au sens du RGPD, le partage est donc anonyme pour les autres utilisateurs mais pseudonyme pour le responsable.</p>
+<p><strong>Retrait.</strong> Vous pouvez retirer à tout moment un pin que vous avez publié : le pin, sa photo et votre revendication sont supprimés. Les pins n'expirent pas d'eux-mêmes. Après 3 signalements d'abus, ou lorsque 2 personnes différentes indiquent « Ce n'est plus là », le pin et sa photo sont masqués pour tous. Le document reste conservé pendant la durée indiquée à la section 7.</p>
+<h3>4.3 Suggestions</h3>
+<p>Depuis l'écran Profil, vous pouvez envoyer un message avec : la catégorie, le texte (2000 caractères au plus), un contact facultatif, la version de l'application, la langue et la date. Le message ne contient ni votre UID ni votre nom. Toutefois, un compteur quotidien de votre espace privé est mis à jour avec l'heure du dernier envoi. <strong>En comparant cette heure avec la date du message, le responsable pourrait relier le message à votre compte.</strong> N'indiquez pas de données personnelles inutiles dans le texte.</p>
+<h3>4.4 Sécurité (Firebase App Check)</h3>
+<p>Pour vérifier que les requêtes proviennent de l'application authentique sur un appareil authentique, l'application utilise Firebase App Check avec Google Play Integrity. Google évalue l'intégrité de l'appareil et de l'application et délivre un jeton. Le responsable ne reçoit aucune donnée de l'appareil.</p>
+<h2>5. Cartes (OpenFreeMap et MapLibre)</h2>
+<p>Les cartes sont dessinées sur le téléphone par MapLibre, avec un style et des tuiles téléchargés depuis OpenFreeMap (<code>tiles.openfreemap.org</code>). Le fournisseur reçoit votre adresse IP et les tuiles demandées : il peut donc savoir <strong>quelle zone vous regardez</strong>, y compris sur votre carte privée. Il ne reçoit ni vos trouvailles ni les marqueurs. Selon les informations qu'il publie, OpenFreeMap n'enregistre pas les adresses IP dans ses journaux ordinaires, peut les conserver jusqu'à 30 jours lors d'incidents techniques et peut utiliser Cloudflare. Sa propre politique s'applique pour les détails. Une carte locale simplifiée reste disponible hors connexion.</p>
+<h2>6. Finalités et bases juridiques</h2>
+<div class="table"><table><thead><tr><th>Traitement</th><th>Base juridique</th></tr></thead><tbody><tr><td>Connexion et gestion du compte</td><td>Exécution du service que vous demandez (art. 6.1.b)</td></tr><tr><td>Publication sur la carte partagée, photo comprise</td><td>Consentement, donné en confirmant le partage et retiré en retirant le pin (art. 6.1.a)</td></tr><tr><td>Revendications, reçus, limites quotidiennes, seuils de retrait, App Check</td><td>Intérêt légitime à prévenir les abus et le spam et à protéger le service (art. 6.1.f)</td></tr><tr><td>Suggestions et réponse éventuelle</td><td>Intérêt légitime à améliorer l'application ; le contact est facultatif (art. 6.1.f)</td></tr><tr><td>Cartes</td><td>Intérêt légitime à afficher la carte que vous ouvrez (art. 6.1.f)</td></tr><tr><td>Position du téléphone</td><td>Autorisation Android facultative ; la donnée reste sur l'appareil</td></tr></tbody></table></div>
+<p>Il n'y a pas de décision automatisée produisant des effets juridiques. Le modèle de reconnaissance décide seulement comment un pin est affiché (trèfle à quatre feuilles ou touffe) et s'il peut être partagé.</p>
+<h2>7. Conservation</h2>
+<ul><li><strong>Données locales :</strong> jusqu'à ce que vous supprimiez la trouvaille ou désinstalliez l'application. La copie de la galerie reste jusqu'à ce que vous la supprimiez.</li><li><strong>Compte et documents privés :</strong> tant que le compte existe. Ils sont supprimés avec le compte, sauf les compteurs techniques décrits à la section 8.</li><li><strong>Pins publics et photos :</strong> jusqu'à ce que vous les retiriez ou supprimiez votre compte. Pins et photos masqués à la suite de signalements : ils sont supprimés automatiquement 90 jours après avoir été masqués.</li><li><strong>Suggestions :</strong> jusqu'à 24 mois après leur envoi, puis supprimées.</li><li><strong>Journaux techniques de Google/Firebase :</strong> selon les règles de Google.</li></ul>
+<h2>8. Suppression du compte</h2>
+<p>Sur l'écran Profil, dans « Infos et confidentialité », « Supprimer le compte et les données » efface : les pins que vous avez publiés avec leurs photos et revendications ; les confirmations, signalements et « Ce n'est plus là » que vous avez donnés à d'autres pins, qui sont retirés (le compteur public diminue de un) avec leurs reçus ; enfin votre compte Firebase. Il ne reste que deux compteurs techniques quotidiens (nombre d'envois et heure du dernier), sans contenu et qui ne peuvent plus être reliés à vous après la suppression du compte : s'ils pouvaient être effacés, n'importe qui pourrait remettre à zéro les limites anti-spam. Un pin déjà masqué par la communauté reste masqué même si votre vote est retiré. Si vous n'avez plus l'application, vous pouvez demander la suppression sur <a href="https://emergentoremergency.github.io/lucky-prospector/delete-account-fr.html">https://emergentoremergency.github.io/lucky-prospector/delete-account-fr.html</a> ou en écrivant à <a href="mailto:intervistaconleai@gmail.com">intervistaconleai@gmail.com</a>. Les données locales s'effacent en supprimant les trouvailles ou en désinstallant l'application. Les suggestions ne sont pas liées au compte : nous pouvons les supprimer sur demande si vous nous aidez à les retrouver.</p>
+<h2>9. Destinataires et transferts</h2>
+<ul><li><strong>Google Ireland Ltd / Google LLC</strong> (Firebase Authentication, Cloud Firestore, App Check, Play Integrity), en qualité de sous-traitant selon les conditions de Firebase. La base Firestore se trouve dans la région <strong><code>eur3</code> (Union européenne)</strong>. L'authentification, App Check et certains services d'assistance peuvent aussi traiter des données hors de l'UE, notamment aux États-Unis. Dans ces cas, Google s'appuie sur les clauses contractuelles types de la Commission européenne et/ou sur le EU-U.S. Data Privacy Framework.</li><li><strong>OpenFreeMap</strong> (et son éventuel CDN), pour les tuiles de la carte (section 5).</li><li>Les <strong>autres utilisateurs</strong> ne voient que les documents publics décrits à la section 4.2.</li></ul>
+<p>Vos données ne sont ni vendues ni utilisées à des fins publicitaires.</p>
+<h2>10. Vos droits</h2>
+<p>Dans les limites des art. 15 à 22 du RGPD, vous pouvez demander l'accès, la rectification, l'effacement, la limitation et la portabilité de vos données, et vous opposer aux traitements fondés sur l'intérêt légitime. Vous pouvez retirer votre consentement à tout moment en retirant vos pins partagés, sans effet sur les traitements antérieurs. Écrivez à <a href="mailto:intervistaconleai@gmail.com">intervistaconleai@gmail.com</a>. Vous avez aussi le droit d'introduire une réclamation auprès du <strong>Garante per la protezione dei dati personali</strong> (www.garanteprivacy.it) ou de l'autorité de votre pays de résidence (en France, la CNIL : www.cnil.fr).</p>
+<h2>11. Mineurs</h2>
+<p>L'application ne s'adresse pas aux personnes de moins de 14 ans, l'âge à partir duquel on peut, en Italie, consentir seul aux services en ligne (art. 2-quinquies du Code italien de la vie privée). Si la loi de votre pays fixe un âge plus élevé, c'est celui-ci qui s'applique. En dessous de cet âge, il ne faut ni se connecter ni partager sans le consentement d'un titulaire de l'autorité parentale.</p>
+<h2>12. Autorisations Android</h2>
+<ul><li><strong>Caméra</strong> (obligatoire) : pour la recherche et les photos.</li><li><strong>Localisation précise/approximative</strong> (facultative) : pour placer une trouvaille sur votre carte.</li><li><strong>Internet et état du réseau :</strong> pour la connexion, la carte partagée, les tuiles de la carte et les suggestions.</li><li><strong>Écriture du stockage</strong> (Android 9 et versions antérieures uniquement) : pour copier les photos dans la galerie.</li></ul>
+<h2>13. Modifications</h2>
+<p>Toute modification sera publiée ici avec la date mise à jour. Si elle est importante, nous vous en informerons aussi dans l'application.</p>
+<footer>Lucky Prospector · Daniele Bulgarelli · <a href="mailto:intervistaconleai@gmail.com">intervistaconleai@gmail.com</a></footer>
+</main>
+</body>
+</html>
